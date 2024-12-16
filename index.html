@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            /* max-width: 300px; */
+            justify-content: center;
+            margin: auto;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        img {
+            width: 50px;
+        }
+
+        hr {
+            color: #000000;
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+        <div class="item item-7">7</div>
+        <div class="item item-8">8</div>
+        <div class="item item-9">9</div>
+        <div class="item item-10">10</div>
+    </div> -->
+
+    <div class="div">
+        <!-- Alert -->
+        <button id="btn">Show Dialog Box</button>
+        <hr>
+
+        <!-- Console -->
+        <button onclick="myFunc()">Console</button>
+        <hr>
+
+        <!-- Changing innerHTML-->
+        <button onclick="myFunc2()">Change InnerHTML</button>
+        <p id="demo">Hello World!</p>
+        <hr>
+
+        <!-- Changing Values of SRC attribute -->
+        <button type="button" onclick="myFunc3()">Change Photo</button>
+        <img id="image" src="images/1.png">
+
+        <!-- Changing Values of SRC attribute Using Event Listener -->
+        <button type="button" id="btn3">Change Photo</button>
+        <img id="image2" src="images/1.png">
+
+        <!-- Change Styling of Elements -->
+        <button type="button" onclick="myFunc4()">Change Style</button>
+        <p style="color: gold;" id="demo2">Hello World</p>
+
+        <!-- Show/Hide the DIV -->
+        <button type="button" onclick="show()">Show</button>
+        <button type="button" onclick="hide()">Hide</button>
+        <div id="div" style="width: 100px; height: 100px; background-color: green;"></div>
+
+        <!-- Add Event Listener -->
+        <button id="btn2">Change InnerHTML2</button>
+        <p id="demo3">Hello World</p>
+
+        <!-- sum using alert -->
+        <button type="button" onclick="myFunc5()">Alert Sum</button>
+
+        <!--sum using InnerHTML -->
+        <button onclick="myFunc6()">Write</button>
+        <p id="demo4"></p>
+
+        <!-- Sum using Event listener and Textarea -->
+        <button id="calculateBtn">Calculate Sum</button>
+        <input id="textarea1"></input>
+
+        <!-- document.write -->
+        <button onclick="myFunc7()">Write Erase all</button>
+
+        <!-- Case sensitive -->
+        <button onclick="myFunc8()">Case Sensitive</button>
+
+        <!-- Variables Example -->
+        <button onclick="myFunc9()">Varaible Example</button>
+
+        <!-- Change Variable Value -->
+        <button onclick="myFunc10()">Change Variable Value</button>
+
+        <!-- Functions with Params -->
+        <p id="demo5"></p>
+
+        <!-- Functions with Params 2-->
+        <p id="demo6"></p>
+
+        <!-- Functions with Params 3-->
+        <p id="demo7">Sum here</p>
+        <button onclick="addNumbers2(4,5)">Add Number</button>
+
+        <!-- The Return Statement 1-->
+        <p id="demo8">Sum here</p>
+
+        <!-- Lowercase -->
+        <input type="text" id="input1" placeholder="uppercase" onchange="toUpperCase()">
+
+        <!-- Lowercase -->
+        <input type="text" id="input2" placeholder="lowercase" onchange="toLowerCase()">
+
+        <!-- UpperCase Windows Onload -->
+        <input type="text" id="input3" placeholder="Uppercase Windows on load">
+
+        <!--Global variable -->
+        <p id="demo9"></p>
+        <button onclick="myFunc11()">GLobal Variable</button>
+
+        <!-- Kilometers to Miles -->
+        <p id="demo10"></p>
+
+        <!-- On Click Event Property -->
+        <button id="btn4">Event Handler</button>
+
+        <!-- inline Event Handler -->
+        <button onclick='alert("Hello World")'>Inline Event Handler</button>
+
+        <!-- Another addEventListener Click -->
+        <button id="btn5">AddeventListner</button>
+
+        <!-- More Event Types -->
+        <!-- Change Event -->
+        <select id="city">
+            <option value="Berlin">Berlin</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Rio">Rio</option>
+            <option value="Manila">Manila</option>
+        </select>
+        <p>you selected: <span id="demo11"></span></p>
+
+        <!-- Mouse Over Event -->
+        <p id="demo12">Mouse Over</p>
+
+        <!-- Mouse Over Event and Mouse Out -->
+        <p id="demo13">Mouse Over</p>
+
+        <!-- Keypress Event -->
+        <textarea id="textarea" cols="4" rows="4"></textarea>
+        <p>The Value is <span id="demo14"></span></p>
+
+        <!-- Focus and Blur Event -->
+        <textarea id="textarea2" cols="4" rows="4"></textarea>
+
+        <!-- Resize Event -->
+        <p>Window Width: <span id="windowWidth"></span></p>
+        <p>Window Height: <span id="windowHeight"></span></p>
+
+        <!-- (==) Comparison Operator Boolean Output-->
+        <p>Are They Equal?: <span id="demo15"></span></p>
+
+        <!-- Object Data Type -->
+        <p id="demo16"></p>
+
+        <!-- Object Data Type -->
+        <p id="demo17"></p>
+
+        <!-- Undefined Data Type -->
+        <p id="demo18"></p>
+
+        <!-- Null Data type -->
+        <p id="displayFruit"></p>
+
+        <!-- Dynamic -->
+        <p id="demo19"></p>
+
+        <!-- typeof Operator -->
+        <p id="demo20"></p>
+
+        <!-- typeof Operator Complex Data-->
+        <p id="demo21"></p>
+
+        <!-- Comaprison OPERATORS -->
+
+        <!-- (==) -->
+        <span>(==)<p id="demo22"></p></span>
+
+        <!-- (!=) -->
+        <span>(!=)<p id="demo23"></p></span>
+
+        <!-- (===) -->
+        <span>(===)<p id="demo24"></p></span>
+
+        <!-- (!==) -->
+        <span>(!==)<p id="demo25"></p></span>
+
+        <!-- (>) -->
+        <span>(>)<p id="demo26"></p></span>
+
+        <!-- (>=) -->
+        <span>(>=)<p id="demo27"></p></span>
+
+        <!-- (<) -->
+        <span>(<)<p id="demo28">
+                </p></span>
+
+        <!-- (>=) -->
+        <span>(<=)<p id="demo29">
+                </p></span>
+
+        <!-- LOGICAL OPERATORS -->
+        <!-- (&&) -->
+        <span>(&&)<p id="demo30"></p></span>
+
+        <!-- (||) -->
+        <span>(||)<p id="demo31"></p></span>
+
+        <!-- (!) -->
+        <span>(!)<p id="demo32"></p></span>
+
+        <!-- Ternary Operator -->
+        <p id="demo33"></p>
+        <p> Since the <b>testScore</b> is more than <b>75</b>, then the value <b>"Passed"</b> was assigned to the
+            <b>testResult</b> variable.
+        </p>
+
+
+        <!-- Bitwise Operator -->
+        <!-- Bitwise AND (&) -->
+        <p id="demo34"></p>
+
+        <!-- Bitwise OR (|) -->
+        <p id="demo35"></p>
+
+        <!-- Bitwise XOR (^) -->
+        <p id="demo36"></p>
+
+        <!-- Bitwise NOT (~) -->
+        <p id="demo37"></p>
+
+        <!-- For Loop -->
+        <p id="loop"></p>
+
+
+        <!-- Object Datatype -->
+        <button onclick="person1.showName()">showName</button>
+        <button onclick="person1.showName()">showAge</button>
+
+        <!-- The Dot Notation -->
+        <p id="demo38"></p>
+
+        <!-- The Bracket Notation -->
+        <p id="demo39"></p>
+
+        <!-- This keyword on Object -->
+        <button onclick="person4.showDetails()">showDetails</button>
+
+        <!-- This keyword on Object -->
+        <button onclick="fruit3.showFruit()">showFruit</button>
+
+        <!-- String Greeting -->
+        <button onclick="greetings()">Let me greet you</button>
+
+        <!-- Escaping Characters -->
+        <p id="demo40"></p>
+
+        <!-- JAVASCRIPT STRING METHODS -->
+
+        <!-- Getting String Length -->
+        <button type="button" onclick="strlen()">Str Len</button>
+
+        <!-- Retrieving Character -->
+        <button type="button" onclick="retChar()">retCHar</button>
+
+        <!--  Finding a Substring -->
+
+        <!-- Substring 1 -->
+        <button type="button" onclick="substring1()">substring1</button>
+
+        <!-- Substring 2 -->
+        <button type="button" onclick="substring2()">substring2</button>
+
+        <!-- the Search Method -->
+        <button type="button" onclick="mySearch()">mySearch</button>
+
+
+        <!-- the Slice Method -->
+        <button type="button" onclick="mySlice()">mySlice</button>
+
+        <!-- the Substring Method -->
+        <button type="button" onclick="mySlice()">My SubString</button>
+
+        <!-- Extra Large or small numbers-->
+        <p id="demo41"></p>
+
+        <!-- Displaying Hexadecimals Numbers-->
+        <p id="demo42"></p>
+
+        <!-- NaN-->
+        <p id="demo43"></p>
+
+        <!-- isNaN() method-->
+        <p id="demo43"></p>
+
+
+        <!-- Number.isInteger() method-->
+        Number.isInteger() method
+        <p id="demo44"></p>
+
+
+        <!-- parseInt() method-->
+        parseInt() method
+        <p id="demo45"></p>
+
+        <!-- toFixed() method-->
+        toFixed() method
+        <p id="demo46"></p>
+
+
+        <!-- toFixed() method-->
+        toFixed() method
+        <p id="demo47"></p>
+
+        <!-- toExponential-->
+        toExponential
+        <p id="demo48"></p>
+
+        <!-- toString -->
+        toString
+        <p id="demo49"></p>
+
+
+
+        <!-- Design Section -->
+
+        <!-- Toggle Button -->
+        <div class="container">
+            <input type="checkbox" id="darkMode">
+            <label for="darkMode" class="button"></label>
+        </div>
+
+
+        <!-- Percentage bar -->
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name">Javascript</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="40%" style="max-width: 40%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Circle Percentage -->
+        <div class="box">
+            <div class="percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <h2>87<span>%</span></h2>
+                </div>
+            </div>
+            <h2 clas="text">Progress</h2>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+
+</html>
